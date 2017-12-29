@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name"            : "Chrome Extension Kit",
+  "description"     : "Example Chrome Extension using Angular",
+  "short_name"      : "ExtensionKit",
+  "version"         : "0.1",
+  "page_action": {
+    "default_popup": "index.html",
+    "default_icon" : "images/logo-red.png"
+  },
+  "background": {
+    "page": "background/background.html",
+    "persistent": true
+  },
+  "permissions": [
+      "debugger"
+    , "storage"
+    , "tabs"
+    , "cookies"
+    , "webRequest"
+    , "webRequestBlocking"
+    , "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'"
+}
